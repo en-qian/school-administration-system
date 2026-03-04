@@ -1,0 +1,13 @@
+const ErrorCodes = {
+  MALFORMED_JSON_ERROR_CODE: 88,
+  RUNTIME_ERROR_CODE: 99,
+
+  INVALID_PARAMS: 400,
+  INVALID_REQUEST: 400,
+
+  UNAUTHORIZED_ACTION: 401,
+
+  SERVER_ERROR: 500,
+} as const;
+
+export default ErrorCodes;

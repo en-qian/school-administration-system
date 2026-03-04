@@ -1,0 +1,26 @@
+version: '3.7'
+
+services:
+  db:
+    container_name: school-administration-system-mysql
+    image: mysql:8.4
+    command: --mysql-native-password=ON
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: school-administration-system
+    ports:
+      - "33306:3306"
+    volumes:
+      - ./database:/docker-entrypoint-initdb.d:ro
+
+  external:
+    container_name: school-administration-system-external
+    build:
+      context: ../external
+      dockerfile: external-system.Dockerfile
+    image: school-administration-system-external:1.0
+    environment:
+      TZ: Asia/Singapore
+      NODE_ENV: production
+    ports:
+      - "5000:5000"

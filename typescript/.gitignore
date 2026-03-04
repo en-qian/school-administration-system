@@ -1,0 +1,11 @@
+# env file
+.env.local
+
+# package-lock
+package-lock.json
+
+# installed node modules
+node_modules
+
+# builded file
+build

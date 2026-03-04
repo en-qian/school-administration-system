@@ -1,0 +1,48 @@
+{
+  "name": "school-administration-system",
+  "version": "1.0.0",
+  "description": "This is a system which School administrators and Teachers can perform administrative functions on their students",
+  "scripts": {
+    "test": "jest --detectOpenHandles",
+    "build": "tsc",
+    "dev": "nodemon --exec \"node -r esbuild-register ./src/server.ts\" -e .ts",
+    "start": "node -r esbuild-register ./dist/server.js"
+  },
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "compression": "^1.7.4",
+    "cors": "^2.8.5",
+    "csv-parser": "^3.0.0",
+    "dotenv": "^9.0.2",
+    "esbuild-register": "^3.6.0",
+    "express": "^4.17.1",
+    "http-status-codes": "^2.1.4",
+    "multer": "^1.4.2",
+    "mysql2": "^2.1.0",
+    "sequelize": "^6.3.3",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@types/body-parser": "^1.19.0",
+    "@types/compression": "^1.7.0",
+    "@types/cors": "^2.8.6",
+    "@types/express": "^4.17.7",
+    "@types/jest": "^26.0.14",
+    "@types/multer": "^1.4.3",
+    "@types/node": "^15.0.3",
+    "@types/validator": "^13.1.0",
+    "@typescript-eslint/eslint-plugin": "^4.23.0",
+    "@typescript-eslint/parser": "^4.23.0",
+    "eslint": "^7.4.0",
+    "jest": "^26.1.0",
+    "nodemon": "^2.0.4",
+    "ts-jest": "^26.3.0",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.2.4"
+  },
+  "peerDependencies": {
+    "eslint": "^7.4.0"
+  }
+}
